@@ -50,6 +50,11 @@ namespace TaskCore
             Status = status;
         }
 
+        public BaseTask()
+        {
+
+        }
+
         public abstract void GetInfo();
 
     }

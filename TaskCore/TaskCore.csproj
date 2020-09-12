@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTask.cs" />
+    <Compile Include="Bug.cs" />
     <Compile Include="Enums\Status.cs" />
     <Compile Include="Enums\TaskEnums.cs" />
     <Compile Include="Task.cs" />
@@ -52,6 +56,9 @@
       <Project>{aa46a9a5-9d44-44b2-821d-2987213a8dbe}</Project>
       <Name>UserCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

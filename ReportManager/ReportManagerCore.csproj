@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4E77F27-C09B-475F-8943-FD37AC24EE40}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>CustomJira</RootNamespace>
-    <AssemblyName>CustomJira</AssemblyName>
+    <ProjectGuid>{02EDE7BB-FF99-490D-A330-FAD16BC22715}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportManager</RootNamespace>
+    <AssemblyName>ReportManager</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,25 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BaseReportManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IReports.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Board\BoardCore.csproj">
-      <Project>{de0523eb-cf9c-414b-b3d0-c7d6d14b2780}</Project>
-      <Name>BoardCore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReportManager\ReportManagerCore.csproj">
-      <Project>{02ede7bb-ff99-490d-a330-fad16bc22715}</Project>
-      <Name>ReportManagerCore</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TaskCore\TaskCore.csproj">
-      <Project>{76E76A26-F0AF-4925-8449-5912B75ECA13}</Project>
+      <Project>{76e76a26-f0af-4925-8449-5912b75eca13}</Project>
       <Name>TaskCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserCore\UserCore.csproj">
+      <Project>{aa46a9a5-9d44-44b2-821d-2987213a8dbe}</Project>
+      <Name>UserCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

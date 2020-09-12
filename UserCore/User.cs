@@ -34,5 +34,10 @@ namespace UserCore
             UpdatedDate = DateTime.Now;
         }
 
+        public User()
+        {
+
+        }
+
     }
 }

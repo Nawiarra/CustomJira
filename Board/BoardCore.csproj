@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=30.0.4.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bogus.30.0.4\lib\net40\Bogus.dll</HintPath>
+    </Reference>
+    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,10 +51,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ReportManager\ReportManagerCore.csproj">
+      <Project>{02ede7bb-ff99-490d-a330-fad16bc22715}</Project>
+      <Name>ReportManagerCore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TaskCore\TaskCore.csproj">
       <Project>{76e76a26-f0af-4925-8449-5912b75eca13}</Project>
       <Name>TaskCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserCore\UserCore.csproj">
+      <Project>{aa46a9a5-9d44-44b2-821d-2987213a8dbe}</Project>
+      <Name>UserCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
